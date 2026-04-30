@@ -20,4 +20,4 @@ chmod o-rwx /app -R
 
 systemctl daemon-reload
 systemctl enable catalogue
-systemctl start catalogue
+systemctl restart catalogue
