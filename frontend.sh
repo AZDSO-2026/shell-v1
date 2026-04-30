@@ -6,6 +6,7 @@ dnf install -y nodejs
 cp nginx.conf /etc/nginx/nginx.conf
 
 curl -L -o /tmp/frontend.zip https://raw.githubusercontent.com/raghudevopsb89/roboshop-microservices/main/artifacts/frontend.zip
+rm -rf /tmp/frontend
 mkdir -p /tmp/frontend
 cd /tmp/frontend
 unzip /tmp/frontend.zip
