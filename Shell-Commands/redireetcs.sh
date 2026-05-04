@@ -1,21 +1,21 @@
 echo Log file Output : /tmp/roboshop.log
 echo -e "\e[31m >>>>>>>>>>>>> Install Nginx <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp/roboshop.log
-dnf install -y nginx &>>/tmp/roboshop.log
+dnf install -y nginx >>/tmp/roboshop.log 2>&1
 
 echo -e "\e[31m >>>>>>>>>>>>> Copy Nginx Config <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp/roboshop.log
-cp nginx.conf /etc/nginx/nginx.conf &>>/tmp/roboshop.log
+cp nginx.conf /etc/nginx/nginx.conf >>/tmp/roboshop.log
 
 echo -e "\e[31m >>>>>>>>>>>>> Install NodeJS <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp/roboshop.log
 curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - &>>/tmp/roboshop.log
-dnf install -y nodejs &>>/tmp/roboshop.log
+dnf install -y nodejs >>/tmp/roboshop.log 2>&1
 
 echo -e "\e[31m >>>>>>>>>>>>> Download Frontend Code <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp/roboshop.log
 curl -L -o /tmp/frontend.zip https://raw.githubusercontent.com/raghudevopsb89/roboshop-microservices/main/artifacts/frontend.zip &>>/tmp/roboshop.log
 
 echo -e "\e[31m >>>>>>>>>>>>> Create App Directory <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp/roboshop.log
-rm -rf /tmp/frontend &>>/tmp/roboshop.log
-mkdir -p /tmp/frontend &>>/tmp/roboshop.log
-cd /tmp/frontend &>>/tmp/roboshop.log
+rm -rf /tmp/frontend >>/tmp/roboshop.log 2>&1
+mkdir -p /tmp/frontend >>/tmp/roboshop.log 2>&1
+cd /tmp/frontend >>/tmp/roboshop.log 2>&1
 
 echo -e "\e[31m >>>>>>>>>>>>> Extract App Code <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp/roboshop.log
 unzip /tmp/frontend.zip &>>/tmp/roboshop.log
