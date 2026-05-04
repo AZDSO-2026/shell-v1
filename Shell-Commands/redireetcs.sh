@@ -3,7 +3,7 @@ echo -e "\e[33m >>>>>>>>>>>>> Install Nginx <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp
 dnf install -y nginx >>/tmp/roboshop.log 2>&1
 
 echo -e "\e[33m >>>>>>>>>>>>> Copy Nginx Config <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp/roboshop.log
-cp nginx.conf /etc/nginx/nginx.conf >>/tmp/roboshop.log
+cp nginx.conf /etc/nginx/nginx.conf >>/tmp/roboshop.log 2>&1
 
 echo -e "\e[33m >>>>>>>>>>>>> Install NodeJS <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp/roboshop.log
 curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - &>>/tmp/roboshop.log
