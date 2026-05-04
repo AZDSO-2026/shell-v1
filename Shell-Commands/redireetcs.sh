@@ -1,6 +1,6 @@
 echo Log file Output : /tmp/roboshop.log
-echo -e "\e[32m >>>>>>>>>>>>> Install Nginx <<<<<<<<<<<<<<< \e[0m"  | tee -a /tmp/roboshop.log
-dnf install -y nginx &>>/tmp/roboshop.log 
+echo -e "\e[35m >>>>>>>>>>>>> Install Nginx <<<<<<<<<<<<<<< \e[0m" | tee -a /tmp/roboshop.log
+dnf install -y nginx &>>/tmp/roboshop.log
 
 echo -e "\e[32m >>>>>>>>>>>>> Copy Nginx Config <<<<<<<<<<<<<<< \e[0m"  | tee -a /tmp/roboshop.log
 cp nginx.conf /etc/nginx/nginx.conf &>>/tmp/roboshop.log 
