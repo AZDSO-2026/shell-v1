@@ -9,7 +9,7 @@ dnf install -y nginx &>>${log_file}
 echo $?
 
 echo -e "${hs} Copy Nginx Config ${he}" | tee -a ${log_file}
-cp nginx.conf /etc/nginx/nginx.conf &>>${log_file}
+cp /home/devops/shell-v1/nginx.conf /etc/nginx/nginx.conf &>>${log_file}
 echo $?
 
 echo -e "${hs} Install NodeJS ${he}" | tee -a ${log_file}
