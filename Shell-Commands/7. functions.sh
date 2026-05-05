@@ -4,7 +4,7 @@ function() {
 
 function
 
-source common.sh
+source 8. common.sh
 func1
 func2
 
