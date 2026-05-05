@@ -4,6 +4,6 @@ funcm() {
 
 funcm
 
-source 8. common.sh
+source common.sh
 func1
 func2
