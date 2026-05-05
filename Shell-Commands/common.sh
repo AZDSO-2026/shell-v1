@@ -1,7 +1,7 @@
 func1() {
 
   echo Hello from sample1 function
-  b=30
+  b=20
 }
 
 func2() {

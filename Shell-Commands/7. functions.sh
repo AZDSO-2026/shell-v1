@@ -1,6 +1,6 @@
 funcm() {
     echo Hello-World 
-    echo a - $a
+    echo a  $a
 }
 
 a=10
