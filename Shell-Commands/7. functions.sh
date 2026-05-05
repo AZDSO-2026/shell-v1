@@ -9,5 +9,5 @@ funcm
 source common.sh
 func1
 func2
-echo b  $b
-echo c  $c
+echo   $b
+echo   $c
