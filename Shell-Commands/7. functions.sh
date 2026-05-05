@@ -3,7 +3,8 @@ function(){
 }
 
 function
-source = common.sh
+
+source common.sh
 func1
 func2
 
