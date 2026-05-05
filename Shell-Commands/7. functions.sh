@@ -1,7 +1,19 @@
-Install_Nginx() {
-    echo "Installing Nginx" 
-    sudo dnf install -y nginx 2>&1 | tee -a /tmp/file
-    sudo systemctl start nginx 2>&1 | tee -a /tmp/file
+function(){
+    echo Hello-World 
 }
 
-Install_Nginx
+function
+source = common.sh
+func1
+func2
+
+
+
+
+# Install_Nginx() {
+#     echo "Installing Nginx" 
+#     sudo dnf install -y nginx 
+#     sudo systemctl start nginx 
+# }
+
+# Install_Nginx
