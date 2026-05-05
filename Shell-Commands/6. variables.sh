@@ -1,5 +1,5 @@
 log_file=/tmp/roboshop.log
-hs="\e[33m >>>>>>>>>>>>>>>>>>>>"
+hs="\e[32m >>>>>>>>>>>>>>>>>>>>"
 he="<<<<<<<<<<<<<<<<<<<<<< \e[0m"
 component_name=frontend
 
@@ -46,4 +46,3 @@ echo -e "${hs} Start Nginx Service ${he}" | tee -a ${log_file}
 systemctl enable nginx &>>${log_file}
 systemctl restart nginx &>>${log_file}
 echo $?
-
