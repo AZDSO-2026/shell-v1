@@ -1,3 +1,5 @@
+cp user.service /etc/systemd/system/user.service
+
 curl -fsSL https://rpm.nodesource.com/setup_20.x | bash -
 dnf install -y nodejs
 node --version
