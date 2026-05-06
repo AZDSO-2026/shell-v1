@@ -8,8 +8,8 @@ rm -rf /app
 mkdir -p /app
 cd /app
 unzip /tmp/shipping.zip
-mysql -h <MYSQL-SERVER-IP> -u root -pRoboShop@1 < db/schema.sql
-mysql -h <MYSQL-SERVER-IP> -u root -pRoboShop@1 < db/app-user.sql
+mysql -h mysql.krkaz2020.xyz -u root -pRoboShop@1 < db/schema.sql
+mysql -h mysql.krkaz2020.xyz -u root -pRoboShop@1 < db/app-user.sql
 
 useradd -r -s /bin/false appuser
 cd /app
