@@ -6,12 +6,14 @@ cp rabbitmq_rabbitmq-server.repo /etc/yum.repos.d/rabbitmq_rabbitmq-server.repo
 
 dnf install -y rabbitmq-server
 
-rabbitmqctl add_user roboshop RoboShop@1 
-rabbitmqctl set_user_tags roboshop administrator 
-rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" 
-
-# 5. Enable and start service
 systemctl enable rabbitmq-server
 systemctl start rabbitmq-server
 
+rabbitmqctl add_user roboshop RoboShop@1 
+
+rabbitmqctl set_user_tags roboshop administrator 
+
+rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" 
+
 systemctl status rabbitmq-server
+
