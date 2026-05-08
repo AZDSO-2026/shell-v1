@@ -4,14 +4,12 @@ cp ratings.service /etc/systemd/system/ratings.service
 
 curl -L -o /tmp/ratings.zip https://raw.githubusercontent.com/raghudevopsb89/roboshop-microservices/main/artifacts/ratings.zip
 rm -rf /app
-mkdir -p /app  
-cd /app
+mkdir -p /app && cd /app
 unzip /tmp/ratings.zip
 mysql -h mysql.krkaz2020.xyz -u root -pRoboShop@1 < db/schema.sql
 mysql -h mysql.krkaz2020.xyz -u root -pRoboShop@1 < db/app-user.sql
 
 useradd -r -s /bin/false appuser
-rm -rf /app
 mkdir -p /app
 pip3 install -r /app/requirements.txt cryptography
 chown -R appuser:appuser /app
